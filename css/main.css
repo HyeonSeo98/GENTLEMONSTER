@@ -1,0 +1,161 @@
+* {margin: 0;padding: 0; font-family: 'Noto Sans KR', sans-serif;}
+/* font-family: "GentleMonster"; */
+img {display: block;}
+li {list-style: none;}
+a {text-decoration: none; color: black;}
+.inner {
+  width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+/* HEADER */
+header {
+  width: 100%;
+  height: 650px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  background: url(../images/header_back.jpg);
+}
+header .container {
+  width: 100%;
+  display: flex;
+  z-index: 10;
+  justify-content: space-between;
+}
+header .container .logo {
+  font-family: "GentleMonster";
+}
+header .container .logo a {
+  color: white;
+}
+header .container .lnb {}
+header .container .lnb ul {
+  display: flex;
+}
+header .container .lnb ul li {
+  margin-right: 10px;
+  font-size: 14px;
+  padding: 13px 8px;
+  box-sizing: border-box;
+}
+header .container .lnb ul li a {
+  color: #fff;
+}
+header .container .gnb {}
+header .container .gnb ul {
+  display: flex;
+}
+header .container .gnb ul li {
+  font-size: 12px;
+  font-family: "GentleMonster";
+  padding: 11.5px 8px;
+  box-sizing: border-box;
+}
+header .container .gnb ul li a {
+  color: #fff;
+}
+
+
+
+/* visual */
+.visual {
+  width: 100%;
+  position: absolute;
+  top: 140px;
+  left: 0;
+  height: 594px;
+  /* background: #ccc; */
+}
+.visual .inner .swiper-slide {
+  position: relative;
+}
+.visual .inner .txt {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  color: #fff;
+  mix-blend-mode: overlay;
+}
+.visual .inner .txt .title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.visual .inner .txt .title .sub {
+  font-size: 20px;
+}
+.visual .inner .txt .title .sub span {
+  font-size: 12px;
+}
+.visual .inner .swiper-button-next {
+  position: absolute;
+  right: -40px;
+  top: 273px;
+}
+.visual .inner .swiper-button-prev {
+  position: absolute;
+  left: -40px;
+  top: 273px;
+}
+.visual .inner .swiper-button-next::after,
+.visual .inner .swiper-button-prev::after {
+  display: none;
+}
+.visual .inner .swiper-button-next i,
+.visual .inner .swiper-button-prev i {
+  font-size: 55px;
+  color: #A7A7A7;
+}
+.visual .inner .swiper-pagination-bullet-active {
+  background: #26d3c9;
+}
+.visual .inner .swiper-pagination {
+  bottom: -40px;
+}
+
+
+/* keyword_rank */
+.keyword_rank {
+  margin-top: 150px;
+}
+.keyword_rank .inner {}
+.keyword_rank .inner .left {
+  width: 370px;
+}
+.keyword_rank .inner .left .title {
+  font-size: 54px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.keyword_rank .inner .left .rank_box {}
+.keyword_rank .inner .left .rank_box>div {
+  padding: 15px 0;
+  /* height: 55px; */
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  /* overflow: hidden; */
+}
+.keyword_rank .inner .left .rank_box>div span {
+  margin-right: 5px;
+  font-weight: bold;
+}
+.keyword_rank .inner .left .rank_box .rank_txt {
+  margin-bottom: 10px;
+}
+.keyword_rank .inner .left .rank_box .pro_box {
+  /* display: flex; */
+  display: none;
+}
+.keyword_rank .inner .left .rank_box>div.on .pro_box {
+  display: flex;
+}
+.keyword_rank .inner .left .rank_box .pro_box div {
+  margin-right: 5px;
+}
+.keyword_rank .inner .left .rank_box .pro_box div:last-child {
+  margin: 0;
+}
+
+
+.keyword_rank .inner .right {}

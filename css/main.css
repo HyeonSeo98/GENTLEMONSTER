@@ -1,4 +1,4 @@
-* {margin: 0;padding: 0; font-family: 'Noto Sans KR', sans-serif;}
+* {margin: 0;padding: 0; font-family: 'Noto Sans KR', sans-serif;box-sizing: border-box;}
 /* font-family: "GentleMonster"; */
 img {display: block;}
 li {list-style: none;}
@@ -8,24 +8,32 @@ a {text-decoration: none; color: black;}
   margin: 0 auto;
   position: relative;
 }
-
+body {
+  height: 3009px;
+}
 
 /* HEADER */
 header {
   width: 100%;
-  height: 650px;
-  padding: 0 50px;
-  box-sizing: border-box;
-  background: url(../images/header_back.jpg);
+  position: relative;
 }
 header .container {
   width: 100%;
+  height: 49px;
   display: flex;
-  z-index: 10;
+  background: black;
+  padding: 0 50px;
+  z-index: 99;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid #fff;
 }
 header .container .logo {
   font-family: "GentleMonster";
+  font-size: 24px;
+  padding-top: 5.5px;
 }
 header .container .logo a {
   color: white;
@@ -35,14 +43,28 @@ header .container .lnb ul {
   display: flex;
 }
 header .container .lnb ul li {
-  margin-right: 10px;
+  margin-right: 40px;
   font-size: 14px;
-  padding: 13px 8px;
+  padding: 14px 8px;
   box-sizing: border-box;
+}
+header .container .lnb ul li:last-child {
+  margin: 0;
 }
 header .container .lnb ul li a {
   color: #fff;
 }
+
+header .container .lnb_menu {
+  position: absolute;
+  /* background: black; */
+  width: 100%;
+  height: 400px;
+  top: 48px;
+  left: 0;
+}
+
+
 header .container .gnb {}
 header .container .gnb ul {
   display: flex;
@@ -50,23 +72,37 @@ header .container .gnb ul {
 header .container .gnb ul li {
   font-size: 12px;
   font-family: "GentleMonster";
-  padding: 11.5px 8px;
-  box-sizing: border-box;
+  padding: 14.5px 8px;
 }
 header .container .gnb ul li a {
   color: #fff;
 }
-
+header .container .gnb ul li:nth-child(5),
+header .container .gnb ul li:nth-child(6) {
+  color: #fff;
+  padding: 13px 0;
+  margin-left: 10px;
+}
+header .container .gnb ul li .material-icons {
+  font-size: 20px;
+}
 
 
 /* visual */
 .visual {
   width: 100%;
+  height: 650px;
+  position: absolute;
+  top: 0;left: 0;
+  background: #000;
+  background: url(../images/bannerBack.jpg);
+}
+.visual .container {
+  width: 100%;
   position: absolute;
   top: 140px;
   left: 0;
   height: 594px;
-  /* background: #ccc; */
 }
 .visual .inner .swiper-slide {
   position: relative;
@@ -117,7 +153,7 @@ header .container .gnb ul li a {
 
 /* keyword_rank */
 .keyword_rank {
-  margin-top: 150px;
+  margin-top: 850px;
 }
 .keyword_rank .inner {}
 .keyword_rank .inner .left {

@@ -392,12 +392,13 @@ header .container .gnb ul li .material-icons {
   height: 500px;
   background: url(../images/bannerBack.jpg) center center/cover;
   background-attachment: fixed;
-  position: relative;
+  filter: grayscale(100%);
+  /* position: relative; */
 }
 .banner img {
   padding-top: 160px;
   margin: 0 auto;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .banner .txt {
   text-align: center;
@@ -412,11 +413,11 @@ header .container .gnb ul li .material-icons {
   font-size: 20px;
 }
 .banner .back {
-  width: 100%;height: 500px;
+  /* width: 100%;height: 500px;
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3); */
 }
 
 /* COLLABO */
@@ -436,6 +437,7 @@ header .container .gnb ul li .material-icons {
 }
 .collabo .collabo_box>div {
   width: 224px;
+  height: 700px;
   display: flex;
   transition: all 0.8s;
   overflow: hidden;
@@ -455,18 +457,28 @@ header .container .gnb ul li .material-icons {
 .collabo .collabo_box .txt .title {
   font-size: 30px;
   text-align: center;
+  font-family: "GentleMonster";
+}
+.collabo .collabo_box .txt .title p:nth-child(1), 
+.collabo .collabo_box .txt .title p:nth-child(3) {
+  font-family: "GentleMonster"; 
 }
 .collabo .collabo_box .txt .title p:nth-child(2) {
   margin: 20px 0;
+  font-family: "GentleMonster"; 
 }
 .collabo .collabo_box .txt .sub {
   font-size: 18px;
   margin-top: 75px;
 }
+.collabo .collabo_box .txt .sub p:first-child {
+  font-family: "GentleMonster"; 
+}
 .collabo .collabo_box .txt .sub p:last-child {
   margin-top: 100px;
   font-size: 14px;
   text-align: center;
+  font-family: "GentleMonster";
 }
 .collabo .collabo_box>div.on .txt {
   display: block;
@@ -582,9 +594,13 @@ header .container .gnb ul li .material-icons {
 /* footer  */
 .footer {}
 .footer .wrap {
-  height: 600px;
+  /* height: 600px; */
   background: #000;
   padding: 40px 50px;
+}
+.footer .wrap .top {
+  position: relative;
+  height: 396px;
 }
 .footer .wrap .top .logo {
   color: #fff;
@@ -596,10 +612,66 @@ header .container .gnb ul li .material-icons {
 }
 .footer .wrap .top .f_searh {
   width: 230px;
+  height: 35px;
   border: 1px solid #fff;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  margin-top: 10px;
 }
 .footer .wrap .top .f_searh input {
+  width: 200px;
+  height: auto;
+  padding: 0 10px;
   border:  none;
   outline: none;
-  border: 1px solid #fff;
+  color: #fff;
+  background-color: #000;
+  border-radius: 20px;
+  display: block;
+}
+.footer .wrap .top .f_searh span {
+  color: #fff;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.footer .wrap .top .foot_list {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.footer .wrap .top .foot_list ul {
+  margin-right: 100px;
+}
+.footer .wrap .top .foot_list ul:last-child {
+  margin: 0;
+}
+.footer .wrap .top .foot_list ul li {
+  padding: 10px 0;
+}
+.footer .wrap .top .foot_list ul li:first-child a {
+  font-size: 16px;
+}
+.footer .wrap .top .foot_list ul li a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 30px 0;
+}
+.footer .wrap .bottom {
+  color: #fff;
+  display: flex;
+  font-size: 12px;
+  margin-top: 50px;
+}
+.footer .wrap .bottom p:nth-child(2) {
+  color: #807E7E;
+  margin-left: 170px;
+}
+.footer .wrap .bottom p:nth-child(3) {
+  margin-left:220px;
+  color: #807E7E;
 }

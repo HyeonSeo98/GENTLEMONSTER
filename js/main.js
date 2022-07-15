@@ -1,20 +1,4 @@
-const headerS = document.querySelector('header .container')
 
-window.addEventListener('scroll',() => {
-  if(scrollY > 10) {
-    headerS.style.background = '#000'
-  }
-  if(scrollY == 0) {
-    headerS.style.background = ''
-  }
-})
-
-headerS.addEventListener('mouseover',() => {
-  headerS.classList.add('hover')
-})
-headerS.addEventListener('mouseout',() => {
-  headerS.classList.remove('hover')
-})
 
 
 

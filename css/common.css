@@ -34,27 +34,27 @@ body {
 /* HEADER */
 header {
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 99;
 }
 
 header .container {
   width: 1920px;
   height: 50px;
   padding: 0 50px;
+  margin: 0 auto;
   overflow: hidden;
   /* background: rgba(0, 0, 0, 0); */
   display: flex;
   transition: all 0.8s;
-  z-index: 99;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
 }
 
 header .container.hover {
-  background: rgba(0, 0, 0, 1);
-  height: auto;
-  opacity: 1;
+  height: 429px;
   transition: all 0.8s;
 }
 
@@ -373,4 +373,24 @@ header .container .gnb ul li .material-icons {
 .footer .wrap .bottom p:nth-child(3) {
   margin-left: 220px;
   color: #807E7E;
+}
+
+.btn_menu {
+  position: fixed;
+  /* top: 50%;
+  transform: translateY(-50%); */
+  bottom: 30px;
+  right: 30px;
+}
+.btn_menu>div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 50px;
+  font-size: 27px;
+  color: #ccc;
+  margin-bottom: 10px;
+  cursor: pointer;
 }

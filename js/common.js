@@ -3,19 +3,19 @@ const headerLnb = document.querySelector('header .container .lnb')
 const searchBtn = document.querySelector('header .search')
 const headerSearch = document.querySelector('header .search_box')
 
-window.addEventListener('scroll',() => {
-  if(scrollY > 10) {
-    headerS.style.background = '#000'
-  }
-  if(scrollY == 0) {
-    headerS.style.background = ''
-  }
-})
+// window.addEventListener('scroll',() => {
+//   if(scrollY > 10) {
+//     headerS.style.background = '#000'
+//   }
+//   if(scrollY == 0) {
+//     headerS.style.background = ''
+//   }
+// })
 
-headerLnb.addEventListener('mouseenter',() => {
+headerLnb.addEventListener('mouseover',() => {
   headerS.classList.add('hover')
 })
-headerS.addEventListener('mouseleave',() => {
+headerS.addEventListener('mouseout',() => {
   headerS.classList.remove('hover')
 })
 
@@ -44,3 +44,12 @@ cartBtn.addEventListener('click',() => {
   }
 })
 
+
+//버튼메뉴
+const scrollTop =document.querySelector('.btn_menu .scroll_top')
+
+scrollTop.addEventListener('click',() => {
+  gsap.to(window, 0.8, { //gsap.to(요소,시간,{애니메이션옵션})
+    scrollTo : 0
+  })
+})

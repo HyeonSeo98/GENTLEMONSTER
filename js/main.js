@@ -1,8 +1,3 @@
-
-
-
-
-
 const ranks = document.querySelectorAll('.rank_box>div')
 const rankB = document.querySelector('.rank_box')
 const rankL = document.querySelectorAll('.keyword_rank .inner .right>div')
@@ -68,7 +63,7 @@ ranks[4].addEventListener('mouseover',() => {
 
 
 // VISUAL
-new Swiper(".visual .mySwiper", {
+const visualSwiper = new Swiper(".visual .mySwiper", {
   slidesPerView: 3,
   spaceBetween: 10,
   loop:true,
@@ -79,7 +74,26 @@ new Swiper(".visual .mySwiper", {
       nextEl: ".visual .swiper-button-next",
       prevEl: ".visual .swiper-button-prev",
     }, 
+  autoplay: {
+    delay: 3000,
+  },
 });
+
+const pause = document.querySelector('.play_btn .pause')
+const play = document.querySelector('.play_btn .play')
+
+pause.addEventListener('click',() => {
+  visualSwiper.autoplay.stop()
+  pause.style.display = 'none'
+  play.style.display = 'block'
+})
+play.addEventListener('click', () => {
+  visualSwiper.autoplay.start()
+  play.style.display = 'none'
+  pause.style.display = 'block'
+})
+
+
 
 
 // product
@@ -93,23 +107,37 @@ var swiper = new Swiper(".product .mySwiper", {
   },
 });
 
-const subH = document.querySelectorAll('.product .sun_box .swiper-slide')
-const subHs = document.querySelectorAll('.product .sun_box .swiper-slide .hover span')
-console.log(subHs)
-console.log(subH)
+const favCounts = document.querySelectorAll('.product .hover .favorite')
+const favCountsOn = document.querySelectorAll('.product .hover .on')
+const btnMenuLike = document.querySelector('.btn_menu .like .count')
+let cnt = 0
+console.log(favCounts)
 
-subH.forEach((subh) => {
-  subh.addEventListener('click',() =>{
-    subHs.forEach((subhs) => {
-      subhs.style.color = 'yellow'
-    })
+favCounts.forEach((favCount) => {
+  favCount.addEventListener('click',() => {
+    if(favCount.classList.contains('on')){
+      favCount.classList.remove('on')
+      favCount.innerHTML = 'favorite_border'
+    }else {
+      favCount.classList.add('on')
+      favCount.innerHTML = 'favorite'
+    }
+
+    if(favCount.classList.contains('on')) {
+      cnt++
+      console.log('gd')
+    }else {
+      cnt--
+    }
+
+    btnMenuLike.innerHTML = cnt
   })
 })
 
 
 const collaboOn = document.querySelectorAll('.collabo .collabo_box>div')
 const collaboBox = document.querySelector('.collabo .collabo_box')
-console.log(collaboOn)
+// console.log(collaboOn)
 
 collaboBox.addEventListener('mouseleave',() => {
   collaboOn[0].classList.add('on')

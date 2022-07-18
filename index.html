@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/common.css">
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
   <script defer src="./js/main.js"></script>
   <script defer src="./js/common.js"></script>
 </head>
@@ -170,13 +172,13 @@
   <section class="visual">
     <div class="container">
       <div class="inner">
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper visual_swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="./images/visual_01.png" alt="">
               <div class="txt">
-                <p class="title">젠틀몬스터 X 제니</p>
-                <p class="sub">젠틀 가든으로 초대합니다.<br><span>젠틀몬스터 X 제니의 콜라보레이션을 구경하세요.</span></p>
+                <p class="title">젠틀몬스터 X SON7</p>
+                <p class="sub">우리는 손흥민의 시대에 살고있습니다.<br><span>젠틀몬스터 X SON7 콜라보레이션을 구경하세요.</span></p>
               </div>
             </div>
             <div class="swiper-slide">
@@ -189,15 +191,15 @@
             <div class="swiper-slide">
               <img src="./images/visual_03.png" alt="">
               <div class="txt">
-                <p class="title">젠틀몬스터 X 제니</p>
-                <p class="sub">젠틀 가든으로 초대합니다.<br><span>젠틀몬스터 X 제니의 콜라보레이션을 구경하세요.</span></p>
+                <p class="title">메탈 장식이 프레임에 각인된 2022PRE-COLLECTION</p>
+                <p class="sub">7개의 다양한 컬렉션 프레임 만나보세요.</p>
               </div>
             </div>
             <div class="swiper-slide">
               <img src="./images/visual_04.png" alt="">
               <div class="txt">
-                <p class="title">젠틀몬스터 X 제니</p>
-                <p class="sub">젠틀 가든으로 초대합니다.<br><span>젠틀몬스터 X 제니의 콜라보레이션을 구경하세요.</span></p>
+                <p class="title">퓨처리테일의 방향성</p>
+                <p class="sub">새롭게 오픈한 <br> HAUS SHANGHAI에 놀러오세요.</p>
               </div>
             </div>
           </div>
@@ -205,6 +207,10 @@
         <div class="swiper-button-next"><i class="xi-angle-right-thin"></i></div>
         <div class="swiper-button-prev"><i class="xi-angle-left-thin"></i></div>
         <div class="swiper-pagination"></div>
+        <div class="play_btn">
+          <p class="pause"><i class="xi-pause"></i></p>
+          <p class="play"><i class="xi-play"></i></p>
+        </div>
       </div>
     </div>
   </section><!--visual-->
@@ -348,7 +354,7 @@
 
 
 
-    <div class="sun_box">
+    <div class="sun_box pro_box">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="./images/sun_01.jpg" alt="">
@@ -357,7 +363,7 @@
               <p>290,000원</p>
             </div>
             <div class="hover">
-              <span class="material-icons">favorite_border</span>
+              <span class="material-icons favorite">favorite_border</span>
               <span class="material-icons">shopping_cart</span>
             </div>
           </div>
@@ -367,7 +373,7 @@
               <p>290,000원</p>
             </div>
             <div class="hover">
-              <span class="material-icons">favorite_border</span>
+              <span class="material-icons favorite">favorite_border</span>
               <span class="material-icons">shopping_cart</span>
             </div>
           </div>
@@ -377,8 +383,8 @@
               <p>290,000원</p>
             </div>
             <div class="hover">
-              <span class="material-icons">favorite_border</span>
-              <span class="material-icons">shopping_cart</span>
+              <span class="material-icons favorite">favorite_border</span>
+              <span class="material-icons favorite">shopping_cart</span>
             </div>
           </div>
           <div class="swiper-slide"><img src="./images/sun_04.jpg" alt="">
@@ -387,7 +393,7 @@
               <p>290,000원</p>
             </div>
             <div class="hover">
-              <span class="material-icons">favorite_border</span>
+              <span class="material-icons favorite">favorite_border</span>
               <span class="material-icons">shopping_cart</span>
             </div>
           </div>
@@ -397,7 +403,7 @@
               <p>290,000원</p>
             </div>
             <div class="hover">
-              <span class="material-icons">favorite_border</span>
+              <span class="material-icons favorite">favorite_border</span>
               <span class="material-icons">shopping_cart</span>
             </div>
           </div>
@@ -407,7 +413,7 @@
               <p>290,000원</p>
             </div>
             <div class="hover">
-              <span class="material-icons">favorite_border</span>
+              <span class="material-icons favorite">favorite_border</span>
               <span class="material-icons">shopping_cart</span>
             </div>
           </div>
@@ -417,7 +423,7 @@
               <p>290,000원</p>
             </div>
             <div class="hover">
-              <span class="material-icons">favorite_border</span>
+              <span class="material-icons favorite">favorite_border</span>
               <span class="material-icons">shopping_cart</span>
             </div>
           </div>
@@ -427,7 +433,7 @@
               <p>290,000원</p>
             </div>
             <div class="hover">
-              <span class="material-icons">favorite_border</span>
+              <span class="material-icons favorite">favorite_border</span>
               <span class="material-icons">shopping_cart</span>
             </div>
           </div>
@@ -437,7 +443,7 @@
               <p>290,000원</p>
             </div>
             <div class="hover">
-              <span class="material-icons">favorite_border</span>
+              <span class="material-icons favorite">favorite_border</span>
               <span class="material-icons">shopping_cart</span>
             </div>
           </div>
@@ -447,13 +453,124 @@
               <p>290,000원</p>
             </div>
             <div class="hover">
-              <span class="material-icons">favorite_border</span>
+              <span class="material-icons favorite">favorite_border</span>
               <span class="material-icons">shopping_cart</span>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="glass_box pro_box">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./images/glass_01.jpg" alt="">
+            <div class="pro_txt">
+              <p>론디</p>
+              <p>290,000원</p>
+            </div>
+            <div class="hover">
+              <span class="material-icons favorite">favorite_border</span>
+              <span class="material-icons">shopping_cart</span>
+            </div>
+          </div>
+          <div class="swiper-slide"><img src="./images/glass_02.jpg" alt="">
+            <div class="pro_txt">
+              <p>론디</p>
+              <p>290,000원</p>
+            </div>
+            <div class="hover">
+              <span class="material-icons favorite">favorite_border</span>
+              <span class="material-icons">shopping_cart</span>
+            </div>
+          </div>
+          <div class="swiper-slide"><img src="./images/glass_03.jpg" alt="">
+            <div class="pro_txt">
+              <p>론디</p>
+              <p>290,000원</p>
+            </div>
+            <div class="hover">
+              <span class="material-icons favorite">favorite_border</span>
+              <span class="material-icons">shopping_cart</span>
+            </div>
+          </div>
+          <div class="swiper-slide"><img src="./images/glass_04.jpg" alt="">
+            <div class="pro_txt">
+              <p>론디</p>
+              <p>290,000원</p>
+            </div>
+            <div class="hover">
+              <span class="material-icons favorite">favorite_border</span>
+              <span class="material-icons">shopping_cart</span>
+            </div>
+          </div>
+          <div class="swiper-slide"><img src="./images/glass_05.jpg" alt="">
+            <div class="pro_txt">
+              <p>론디</p>
+              <p>290,000원</p>
+            </div>
+            <div class="hover">
+              <span class="material-icons favorite">favorite_border</span>
+              <span class="material-icons">shopping_cart</span>
+            </div>
+          </div>
+          <div class="swiper-slide"><img src="./images/glass_06.jpg" alt="">
+            <div class="pro_txt">
+              <p>론디</p>
+              <p>290,000원</p>
+            </div>
+            <div class="hover">
+              <span class="material-icons favorite">favorite_border</span>
+              <span class="material-icons">shopping_cart</span>
+            </div>
+          </div>
+          <div class="swiper-slide"><img src="./images/glass_07.jpg" alt="">
+            <div class="pro_txt">
+              <p>론디</p>
+              <p>290,000원</p>
+            </div>
+            <div class="hover">
+              <span class="material-icons favorite">favorite_border</span>
+              <span class="material-icons">shopping_cart</span>
+            </div>
+          </div>
+          <div class="swiper-slide"><img src="./images/glass_08.jpg" alt="">
+            <div class="pro_txt">
+              <p>론디</p>
+              <p>290,000원</p>
+            </div>
+            <div class="hover">
+              <span class="material-icons favorite">favorite_border</span>
+              <span class="material-icons">shopping_cart</span>
+            </div>
+          </div>
+          <div class="swiper-slide"><img src="./images/glass_09.jpg" alt="">
+            <div class="pro_txt">
+              <p>론디</p>
+              <p>290,000원</p>
+            </div>
+            <div class="hover">
+              <span class="material-icons favorite">favorite_border</span>
+              <span class="material-icons">shopping_cart</span>
+            </div>
+          </div>
+          <div class="swiper-slide"><img src="./images/glass_10.jpg" alt="">
+            <div class="pro_txt">
+              <p>론디</p>
+              <p>290,000원</p>
+            </div>
+            <div class="hover">
+              <span class="material-icons favorite">favorite_border</span>
+              <span class="material-icons">shopping_cart</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+
+
   </section><!--product-->
 
 
@@ -714,6 +831,7 @@
 
   <div class="btn_menu">
     <div class="scroll_top"><i class="xi-arrow-top"></i></div>
+    <div class="like"><i class="xi-heart-o"><p class="count">0</p></i></div>
   </div>
 
 </body>

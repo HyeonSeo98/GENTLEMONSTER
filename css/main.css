@@ -73,6 +73,22 @@
   bottom: -40px;
 }
 
+.visual .inner .play_btn {
+  display: flex;
+  color:#26d3c9;
+  position: absolute;
+  bottom: -42.5px;
+  left: 740px;
+  z-index: 99;
+}
+.visual .inner .play_btn i {
+  cursor: pointer;  
+}
+.visual .inner .play_btn .play {
+  display: none;
+}
+
+
 
 /* keyword_rank */
 .keyword_rank {
@@ -181,6 +197,8 @@
 
 /* product */
 #sunglass,#glasses {display: none;}
+#sunglass:checked ~ .sun_box {display: block;}
+#glasses:checked ~ .glass_box {display: block;}
 #sunglass:checked ~ .label_box .sunglass {color: #000;}
 #glasses:checked ~ .label_box .glasses {color: #000;}
 .product {
@@ -203,30 +221,33 @@
 .product .label_box label:first-child {
   margin-right: 140px;
 }
-.product .sun_box .swiper-slide {
+.product .pro_box {
+  display: none;
+}
+.product .pro_box .swiper-slide {
   width: 224px;
   height: 386px;
   position: relative;
 }
-.product .sun_box .swiper-slide img {
+.product .pro_box .swiper-slide img {
   width: 224px;
   height: 360px;
 }
-.product .sun_box .swiper-slide .pro_txt {
+.product .pro_box .swiper-slide .pro_txt {
   width: 224px;
   justify-content: space-between;
   color: #757575;
 }
-.product .sun_box .swiper-slide .pro_txt p:first-child {
+.product .pro_box .swiper-slide .pro_txt p:first-child {
   font-size: 18px;
   float: left;
 }
-.product .sun_box .swiper-slide .pro_txt p:last-child {
+.product .pro_box .swiper-slide .pro_txt p:last-child {
   font-size: 14px;
   float: right;
   padding-top: 6px;
 }
-.product .sun_box .swiper-slide .hover {
+.product .pro_box .swiper-slide .hover {
   position: absolute;
   top: 0;
   left: 0;
@@ -238,18 +259,20 @@
   align-items: center;
   transition: all 0.5s;
 }
-.product .sun_box .swiper-slide .hover span {
+.product .pro_box .swiper-slide .hover span {
   color: rgba(0, 0, 0, 0);
 }
-.product .sun_box .swiper-slide .hover span:first-child {
+.product .pro_box .swiper-slide .hover span:first-child {
   margin-right: 15px;
 }
-.product .sun_box .swiper-slide:hover .hover {
+.product .pro_box .swiper-slide:hover .hover {
   background: rgba(0, 0, 0, 0.2);
 }
-.product .sun_box .swiper-slide:hover .hover span {
-  /* color: #faf185; */
+.product .pro_box .swiper-slide:hover .hover span {
   color: #fff;
+}
+.product .pro_box .swiper-slide:hover .hover .favorite.on {
+  color: red;
 }
 
 

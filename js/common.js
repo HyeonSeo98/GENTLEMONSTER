@@ -3,14 +3,6 @@ const headerLnb = document.querySelector('header .container .lnb')
 const searchBtn = document.querySelector('header .search')
 const headerSearch = document.querySelector('header .search_box')
 
-// window.addEventListener('scroll',() => {
-//   if(scrollY > 10) {
-//     headerS.style.background = '#000'
-//   }
-//   if(scrollY == 0) {
-//     headerS.style.background = ''
-//   }
-// })
 
 headerLnb.addEventListener('mouseover',() => {
   headerS.classList.add('hover')

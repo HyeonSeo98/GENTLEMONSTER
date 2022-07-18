@@ -129,7 +129,6 @@ favCounts.forEach((favCount) => {
 })
 
 
-
 const color01s = document.querySelectorAll('.color01')
 const color02s = document.querySelectorAll('.color02')
 const color03s = document.querySelectorAll('.color03')
